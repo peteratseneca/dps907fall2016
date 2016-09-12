@@ -3,6 +3,11 @@
 **AllHttpMethods**
 
 Based on the new "Web service project v1" template. Has an Employees controller. All relevant HTTP methods are supported. Demonstrates the best practice way to handle requests.  
+* Get all
+* Get one
+* Add new
+* Edit existing
+* Delete item
 
 In Visual Studio, configure it to locate/recognize "Attention" comment tokens, and show them on the Task List.  
 
