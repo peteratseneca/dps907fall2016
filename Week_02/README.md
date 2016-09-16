@@ -28,3 +28,12 @@ Features:
 Example solution for Assignment 1. Implements the specifications, and best practices.  
 
 In Visual Studio, look at the Task List, and go through the comment tokens.  
+
+**AssociationsIntro**
+
+Shows how to handle associated data in a web service, for a one-to-many association.  
+
+Features:
+* Employee (one) to Customer (many)
+* Get one, and include associated object(s)
+* Add new, for the dependent end (e.g. Customer, which requires an Employee identifier)
