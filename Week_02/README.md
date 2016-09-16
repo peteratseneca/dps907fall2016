@@ -22,3 +22,9 @@ Use Fiddler as the client/requestor when you're debugging.
 Features:
 * Get all customers will throw a series of errors, logic, and missing AutoMapper map
 * Edit existing customer will throw an error
+
+**ExampleSolutionForAssignment1**
+
+Example solution for Assignment 1. Implements the specifications, and best practices.  
+
+In Visual Studio, look at the Task List, and go through the comment tokens.  
