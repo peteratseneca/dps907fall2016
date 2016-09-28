@@ -3,6 +3,10 @@
 **MediaUpload**
 
 Shows how to send - upload - non-text internet media items to a web service.  
+
+**MediaUploadAndDeliver**
+
+Based on the previous code example, this uses "content negotiation" to fetch resource represenatations.  
  
 **ByteFormatter**
 
