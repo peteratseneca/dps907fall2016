@@ -21,6 +21,8 @@ namespace MediaUpload
             Mapper.CreateMap<Models.Book, Controllers.BookWithMediaInfo>();
             Mapper.CreateMap<Models.Book, Controllers.BookWithMedia>();
 
+            Mapper.CreateMap<Controllers.BookWithMedia, Controllers.BookWithMediaInfo>();
+            
             Mapper.CreateMap<Controllers.BookAdd, Models.Book>();
 
 #pragma warning restore CS0618
