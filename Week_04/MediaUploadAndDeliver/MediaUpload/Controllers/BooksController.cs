@@ -68,7 +68,8 @@ namespace MediaUpload.Controllers
             if (imageHeader == null)
             {
                 // Normal processing for a JSON result
-                return Ok(o);
+                // Remove the "Photo" property
+                return Ok(AutoMapper.Mapper.Map<BookWithMediaInfo>(o));
             }
             else
             {
