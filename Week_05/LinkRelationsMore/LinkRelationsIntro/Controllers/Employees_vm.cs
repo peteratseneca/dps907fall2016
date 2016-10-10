@@ -71,6 +71,16 @@ namespace LinkRelationsIntro.Controllers
         public string Email { get; set; }
     }
 
+    public class EmployeeAddTemplate
+    {
+        public string LastName { get { return "Last name, string, required, up to 20 characters"; } }
+        public string FirstName { get { return "First name, string, required, up to 20 characters"; } }
+        public string Title { get { return "Job title, string, optional, up to 30 characters"; } }
+        public string ReportsTo { get { return "Identifier of this employee's supervisor, integer, optional, will be validated"; } }
+        public string BirthDate { get { return "Birth date, date type, optional, if empty, will be set to an initial value"; } }
+        public string HireDate { get { return "Date hired, date type, optional, if empty, will be set to an initial value"; } }
+    }
+
     // Inherits from EmployeeAdd
     public class EmployeeBase : EmployeeAdd
     {
@@ -116,6 +126,12 @@ namespace LinkRelationsIntro.Controllers
     public class EmployeesLinked : LinkedCollection<EmployeeWithLink>
     {
         // Constructor - call the base class constructor
-        public EmployeesLinked(IEnumerable<EmployeeWithLink> collection) : base(collection) { }
+        public EmployeesLinked(IEnumerable<EmployeeWithLink> collection) : base(collection)
+        {
+            Template = new EmployeeAddTemplate();
+        }
+
+        // Add new template
+        public EmployeeAddTemplate Template { get; set; }
     }
 }
