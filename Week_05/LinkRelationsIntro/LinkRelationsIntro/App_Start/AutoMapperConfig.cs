@@ -21,7 +21,7 @@ namespace LinkRelationsIntro
 
             Mapper.CreateMap<Controllers.EmployeeAdd, Models.Employee>();
 
-            // Attention 07 - Special CreateMap code for the Chinook database
+            // Attention 09 - Special CreateMap code for the Chinook database
             // Had to add an "Id" property, with an initial value of "EmployeeId"
             // Otherwise the link relations factory won't work correctly
             Mapper.CreateMap<Controllers.EmployeeBase, Controllers.EmployeeWithLink>()

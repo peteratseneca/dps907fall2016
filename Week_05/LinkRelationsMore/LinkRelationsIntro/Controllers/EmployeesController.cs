@@ -83,13 +83,14 @@ namespace LinkRelationsIntro.Controllers
             var uri = Url.Link("DefaultApi", new { id = addedItem.EmployeeId });
 
             // Create a hypermedia representation
+            // Attention 18 - This "add new" use case must use the second constructor
             EmployeeLinked result = new EmployeeLinked
-                (Mapper.Map<EmployeeWithLink>(addedItem));
+                (Mapper.Map<EmployeeWithLink>(addedItem), addedItem.EmployeeId);
 
             return Created(uri, result);
         }
 
-        // Attention 18 - Edit existing
+        // Attention 20 - Edit existing
         // PUT: api/Employees/5
         public IHttpActionResult Put(int? id, [FromBody]EmployeeEditContactInfo editedItem)
         {

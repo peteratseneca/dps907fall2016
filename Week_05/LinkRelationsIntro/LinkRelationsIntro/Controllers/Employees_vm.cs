@@ -110,7 +110,12 @@ namespace LinkRelationsIntro.Controllers
     public class EmployeeLinked : LinkedItem<EmployeeWithLink>
     {
         // Constructor - call the base class constructor
+
+        // Attention 07 - Linked item constructor - all use cases except "add new"
         public EmployeeLinked(EmployeeWithLink item) : base(item) { }
+
+        // Attention 08 - Linked item constructor - add new" use case
+        public EmployeeLinked(EmployeeWithLink item, int id) : base(item, id) { }
     }
 
     public class EmployeesLinked : LinkedCollection<EmployeeWithLink>
