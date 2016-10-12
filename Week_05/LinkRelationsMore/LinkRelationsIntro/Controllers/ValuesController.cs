@@ -4,9 +4,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+// added...
+using System.Web.Http.Description;
 
 namespace LinkRelationsIntro.Controllers
 {
+    // Help Page generator will ignore this controller
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class ValuesController : ApiController
     {
         // Reference to the data manager

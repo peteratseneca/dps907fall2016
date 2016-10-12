@@ -17,6 +17,10 @@ namespace LinkRelationsIntro.Controllers
         // in the App_Start > WebApiConfig class
 
         // GET: api/Root (or "/api" or "/api/")
+        /// <summary>
+        /// Entry point of this web service
+        /// </summary>
+        /// <returns>A list of resource URIs</returns>
         public IHttpActionResult Get()
         {
             // Create a collection of Link objects
@@ -25,7 +29,7 @@ namespace LinkRelationsIntro.Controllers
             links.Add(new Link() { Rel = "collection", Href = "/api/employees", Method = "GET,POST" });
             links.Add(new Link() { Rel = "collection", Href = "/api/customers", Method = "GET,POST" });
             links.Add(new Link() { Rel = "collection", Href = "/api/invoices", Method = "GET,POST" });
-            links.Add(new Link() { Rel = "collection", Href = "/api/employees/{id}/setsupervisor", Method = "PUT" });
+            links.Add(new Link() { Rel = "command", Href = "/api/employees/{id}/setsupervisor", Method = "PUT" });
 
             // Create and configure a dictionary to hold the collection
             // We need to return a simple object, so a Dictionary<TKey, TValue> is ideal

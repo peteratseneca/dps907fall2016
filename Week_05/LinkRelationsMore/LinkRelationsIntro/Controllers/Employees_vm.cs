@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 // added...
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace LinkRelationsIntro.Controllers
 {
@@ -24,14 +25,21 @@ namespace LinkRelationsIntro.Controllers
             HireDate = DateTime.Now.AddYears(-1);
         }
 
-        [Required]
-        [StringLength(20)]
+        /// <summary>
+        /// Last name
+        /// </summary>
+        [Required, StringLength(20)]
         public string LastName { get; set; }
 
-        [Required]
-        [StringLength(20)]
+        /// <summary>
+        /// First name
+        /// </summary>
+        [Required, StringLength(20)]
         public string FirstName { get; set; }
 
+        /// <summary>
+        /// Job title
+        /// </summary>
         [StringLength(30)]
         public string Title { get; set; }
 

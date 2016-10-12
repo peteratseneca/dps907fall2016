@@ -494,6 +494,42 @@
             <param name="id">Employee identifier</param>
             <returns>EmployeeBase (linked) object</returns>
         </member>
+        <member name="M:LinkRelationsIntro.Controllers.EmployeesController.Post(LinkRelationsIntro.Controllers.EmployeeAdd)">
+            <summary>
+            Add a new employee object
+            </summary>
+            <param name="newItem">Fully-configured employee</param>
+            <returns>New employee object, with store-genereated identifier</returns>
+        </member>
+        <member name="M:LinkRelationsIntro.Controllers.EmployeesController.Put(System.Nullable{System.Int32},LinkRelationsIntro.Controllers.EmployeeEditContactInfo)">
+            <summary>
+            Edit an employee (contact info only)
+            </summary>
+            <param name="id">Employee identifier</param>
+            <param name="editedItem">Updated contact info</param>
+            <returns>Employee object with all updated values</returns>
+        </member>
+        <member name="M:LinkRelationsIntro.Controllers.EmployeesController.Delete(System.Int32)">
+            <summary>
+            Delete an employee
+            </summary>
+            <param name="id">Employee identifier</param>
+        </member>
+        <member name="P:LinkRelationsIntro.Controllers.EmployeeAdd.LastName">
+            <summary>
+            Last name
+            </summary>
+        </member>
+        <member name="P:LinkRelationsIntro.Controllers.EmployeeAdd.FirstName">
+            <summary>
+            First name
+            </summary>
+        </member>
+        <member name="P:LinkRelationsIntro.Controllers.EmployeeAdd.Title">
+            <summary>
+            Job title
+            </summary>
+        </member>
         <member name="T:LinkRelationsIntro.Controllers.Link">
             <summary>
             A hypermedia link
@@ -557,6 +593,12 @@
             <summary>
             Data collection
             </summary>
+        </member>
+        <member name="M:LinkRelationsIntro.Controllers.RootController.Get">
+            <summary>
+            Entry point of this web service
+            </summary>
+            <returns>A list of resource URIs</returns>
         </member>
     </members>
 </doc>

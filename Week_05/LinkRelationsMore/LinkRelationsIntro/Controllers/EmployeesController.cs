@@ -61,6 +61,11 @@ namespace LinkRelationsIntro.Controllers
 
         // Attention 17 - Add new
         // POST: api/Employees
+        /// <summary>
+        /// Add a new employee object
+        /// </summary>
+        /// <param name="newItem">Fully-configured employee</param>
+        /// <returns>New employee object, with store-genereated identifier</returns>
         public IHttpActionResult Post([FromBody]EmployeeAdd newItem)
         {
             // Ensure that the URI is clean (and does not have an id parameter)
@@ -92,6 +97,12 @@ namespace LinkRelationsIntro.Controllers
 
         // Attention 20 - Edit existing
         // PUT: api/Employees/5
+        /// <summary>
+        /// Edit an employee (contact info only)
+        /// </summary>
+        /// <param name="id">Employee identifier</param>
+        /// <param name="editedItem">Updated contact info</param>
+        /// <returns>Employee object with all updated values</returns>
         public IHttpActionResult Put(int? id, [FromBody]EmployeeEditContactInfo editedItem)
         {
             // Ensure that an "editedItem" is in the entity body
@@ -136,6 +147,10 @@ namespace LinkRelationsIntro.Controllers
 
         // Delete item
         // DELETE: api/Employees/5
+        /// <summary>
+        /// Delete an employee
+        /// </summary>
+        /// <param name="id">Employee identifier</param>
         public void Delete(int id)
         {
             // In a controller 'Delete' method, a void return type will
