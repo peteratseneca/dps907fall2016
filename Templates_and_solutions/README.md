@@ -10,7 +10,7 @@ Adds several useful features to the "version 1" project template, which were cov
 * Media type formatter for byte-oriented content
 * HTTP OPTIONS handler
 * Hypermedia-aware link relations generator
-* Root controller to handle requests to /api
+* Root (entry point) controller to handle requests to /api
 * Web API Help Page configuration
 * Minor improvement for exceptions/errors
 
