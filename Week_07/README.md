@@ -18,3 +18,12 @@ This is a custom filter, to authorize a custom claim.
 
 Add this to any project, in the Controllers folder, and edit its namespace. Then you can use it any controller.  
 
+**SimpleClaims**
+
+Enhances the ProjectWithSecurity code example (above).  
+
+Adds claims processing. When you register a new user account, you must provide a given name, a surname, and one or more role claims. See the EntityBodyData.txt source code file for examples.  
+
+Features:
+* Test controller that will enable you to test various user account scenarios
+* AuthInfo controller that will decrypt/decode the access token, and display its contents
