@@ -12,9 +12,9 @@ Features:
 * Simple non-enhanced web service project with security
 * An "AuthInfo" controller that will return access token data (if you are authenticated)
 
-**CustomAuthorizeAttribute.cs**
+**CustomAuthorizeAttributeApi.cs**
 
-This is a custom filter, to authorize a custom claim.  
+This is a custom filter, to authorize a custom claim, for a Web API controller (a controller that inherits from ApiController).  
 
 Add this to any project, in the Controllers folder, and edit its namespace. Then you can use it any controller.  
 
