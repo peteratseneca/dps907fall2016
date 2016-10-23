@@ -5,11 +5,15 @@ using System.Web;
 // new...
 using System.Security.Claims;
 using System.ComponentModel;
-using System.Web.Mvc;
+using System.Web.Http;
+using System.Web.Http.Controllers;
 
-namespace ProjectWithSecurity.Controllers
+namespace Assignment7.Controllers
 {
     // This is version 1 of a custom authorization attribute class
+    // ####################
+    // For an ApiController (web service, Web API)
+    // ####################
     // When I have time, I'll rewrite it so that the Roles and Users properties are not included
 
     // This source code file can hold many custom authorize attribute subclasses
@@ -25,10 +29,10 @@ namespace ProjectWithSecurity.Controllers
         public string ClaimValue { get; set; }
 
         // Override method
-        public override void OnAuthorization(AuthorizationContext filterContext)
+        public override void OnAuthorization(HttpActionContext actionContext)
         {
             // Get a reference to the user
-            var user = filterContext.HttpContext.User as ClaimsPrincipal;
+            var user = actionContext.RequestContext.Principal as ClaimsPrincipal;
 
             // Matches (below) are case-insensitive
 
@@ -51,12 +55,12 @@ namespace ProjectWithSecurity.Controllers
             if (matchedClaim)
             {
                 // Yes, authorized
-                base.OnAuthorization(filterContext);
+                base.OnAuthorization(actionContext);
             }
             else
             {
                 // No, not authorized
-                base.HandleUnauthorizedRequest(filterContext);
+                base.HandleUnauthorizedRequest(actionContext);
             }
         }
 
