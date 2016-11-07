@@ -11,3 +11,13 @@ Features:
 * Authentication for web app clients - credential validation, and cookie issuing
 * Authentication for web service clients - credential validation, and access token issuing
 * Machine key generator, enabling a multi-app shared security environment
+
+**SecuredCustomer**
+
+Similar functionality to the long-ago "AssociationsIntro" code example. Simply delivers customer data from the Chinook sample database.  
+
+This app has been configured with the access token validation part of the authentication process. Like other apps, it already includes the ability to perform authorization. 
+
+Features:
+* Values controller with a protected "get one" method
+* Protected Customers controller
