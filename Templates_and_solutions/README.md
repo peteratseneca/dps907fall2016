@@ -2,7 +2,7 @@
 
 This folder has project templates that you can use.  
 
-In the near future, it will also have some pre-built solutions for scenarios (e.g. security).  
+In the near future, it will also have some pre-built solutions for scenarios (e.g. security), and example solutions for assignments.  
 
 **Web service project v2**
 
