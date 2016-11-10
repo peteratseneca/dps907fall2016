@@ -1,16 +1,16 @@
 ### Week 9 code examples
 
-**IAServerV1**
+**IAServerV2**
 
-IA Server, version 1. Identity management, and authentication (it issues cookies and access tokens.) Designed to be used with other apps.  
-
-This is "version 1". After the Assignment 8 due date, another version will be posted, and it will include user account management, and claims management features.  
+IA Server, version 2. Identity management, and authentication (it issues cookies and access tokens.) Designed to be used with other apps. Includes user account management, and claims management features.  
 
 Features:
 * Identity management, for web app and web service clients
 * Authentication for web app clients - credential validation, and cookie issuing
 * Authentication for web service clients - credential validation, and access token issuing
 * Machine key generator, enabling a multi-app shared security environment
+* Master list of "app claims" allowed to be used in user accounts, and management of that master list
+* User account management
 
 **SecuredCustomer**
 
@@ -21,3 +21,7 @@ This app has been configured with the access token validation part of the authen
 Features:
 * Values controller with a protected "get one" method
 * Protected Customers controller
+
+**IAServerV1**
+
+IA Server, version 1. Old version, without user account and claims management. Do not use.
