@@ -1,0 +1,10 @@
+### Week 10 code examples
+
+**RequestUser class**
+
+Add this to the controllers folder. Or, add its code to the bottom of the Manager.cs source code file. Then, add and initialize a new property in the Manager class.  
+
+Features:
+* Easy access to information about the current user (security principal)
+* Common claim values are exposed as top-level proprties
+* Can be edited to add more properties and methods
