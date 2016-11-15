@@ -11,21 +11,17 @@ namespace ObjectOwner.Controllers
     public class NotesController : ApiController
     {
         // Reference to the manager
-        private Manager m;
+        private Manager m = new Manager();
 
         // GET: api/Notes
         public IHttpActionResult Get()
         {
-            m = new Manager();
-
             return Ok(m.NoteGetAll());
         }
 
         // GET: api/Notes/5
         public IHttpActionResult Get(int? id)
         {
-            m = new Manager();
-
             // Attempt to fetch the object
             var o = m.NoteGetById(id.GetValueOrDefault());
 
@@ -43,8 +39,6 @@ namespace ObjectOwner.Controllers
         // POST: api/Notes
         public IHttpActionResult Post([FromBody]NoteAdd newItem)
         {
-            m = new Manager();
-
             // Ensure that the URI is clean (and does not have an id parameter)
             if (Request.GetRouteData().Values["id"] != null) { return BadRequest("Invalid request URI"); }
 

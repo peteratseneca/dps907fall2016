@@ -17,14 +17,28 @@ namespace ObjectOwner.Controllers
         // Reference to the data context
         private ApplicationDbContext ds = new ApplicationDbContext();
 
-        // Request user
-        public RequestUser User { get; private set; }
+        // Request user property...
+
+        // Backing field for the property
+        private RequestUser _user;
+
+        // Getter only, no setter
+        public RequestUser User
+        {
+            get
+            {
+                // On first use, it will be null, so set its value
+                if (_user == null)
+                {
+                    _user = new RequestUser(HttpContext.Current.User as ClaimsPrincipal);
+                }
+                return _user;
+            }
+        }
 
         public Manager()
         {
             // If necessary, add constructor code here
-
-            User = new RequestUser(HttpContext.Current.User as ClaimsPrincipal);
 
             // Turn off the Entity Framework (EF) proxy creation features
             // We do NOT want the EF to track changes - we'll do that ourselves
@@ -52,21 +66,11 @@ namespace ObjectOwner.Controllers
 
 
         // ############################################################
-        // User
-
-        private void LoadUser()
-        {
-            User = new RequestUser(HttpContext.Current.User as ClaimsPrincipal);
-        }
-
-        // ############################################################
         // Note
 
         public IEnumerable<NoteBase> NoteGetAll()
         {
             LoadData();
-
-            //LoadUser();
 
             // Attention - 3 - Get all, for the authenticated user only
             var c = ds.Notes.Where(n => n.Owner == User.Name);
@@ -76,8 +80,6 @@ namespace ObjectOwner.Controllers
 
         public NoteBase NoteGetById(int id)
         {
-            //LoadUser();
-
             // Attention - 4 - Get one, for the authenticated user only
             var o = ds.Notes.SingleOrDefault
                 (n => n.Id == id && n.Owner == User.Name);
