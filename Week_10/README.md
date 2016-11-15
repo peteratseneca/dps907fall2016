@@ -8,3 +8,11 @@ Features:
 * Easy access to information about the current user (security principal)
 * Common claim values are exposed as top-level proprties
 * Can be edited to add more properties and methods
+
+**ObjectOwner**
+
+Shows how to work with an entity collection that offers privacy to an object’s owner.  
+
+Features:
+* RequestUser class implementation
+* Notes (diary/journal) entity, private access to an object's owner
