@@ -16,3 +16,7 @@ Shows how to work with an entity collection that offers privacy to an object’s o
 Features:
 * RequestUser class implementation
 * Notes (diary/journal) entity, private access to an object's owner
+
+**Assign10Base**
+
+Use this as a base for your Assignment 10 work.
