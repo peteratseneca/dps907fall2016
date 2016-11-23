@@ -40,12 +40,12 @@ namespace IA
             // Initialize the ASP.NET Identity sign in manager object (which is used elsewhere in the app)
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
-            // Initialize user accounts for the app
-            IdentityInitialize.LoadUserAccounts();
-
             // Initialize claims for the app
             IdentityInitialize.LoadAppClaims();
             
+            // Initialize user accounts for the app
+            IdentityInitialize.LoadUserAccounts();
+
             // Enable the application to use a cookie to store information for the signed in user
             // Here, configure the cookie's options (there are other options too)
             app.UseCookieAuthentication(new CookieAuthenticationOptions
