@@ -33,7 +33,7 @@ function getAccessToken() {
                 sessionStorage.setItem('token', tokenResponse.access_token);
 
                 // navigate to home page
-                window.location = '/HTML5Home.html'
+                window.location.href = '/HTML5Home.html'
 
             } else {
                 // request was NOT successful, so you can do something here if you wish,
